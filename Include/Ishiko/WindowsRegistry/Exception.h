@@ -23,7 +23,7 @@
 #ifndef _ISHIKO_WINDOWSREGISTRY_EXCEPTION_H_
 #define _ISHIKO_WINDOWSREGISTRY_EXCEPTION_H_
 
-#include "Ishiko/Core.h"
+#include "Ishiko/Errors.h"
 
 namespace Ishiko
 {

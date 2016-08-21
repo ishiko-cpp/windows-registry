@@ -1,0 +1,12 @@
+setting ISHIKO_WINDOWSREGISTRY_ROOT
+{
+    help = "Path to the Ishiko WindowsRegistry installation";
+    default = '$(ISHIKO)/WindowsRegistry';
+}
+
+template IshikoWindowsRegistry
+{
+    includedirs += $(ISHIKO_WINDOWSREGISTRY_ROOT)/Include;
+
+    libdirs += $(ISHIKO_WINDOWSREGISTRY_ROOT)/Lib/$(arch);
+}

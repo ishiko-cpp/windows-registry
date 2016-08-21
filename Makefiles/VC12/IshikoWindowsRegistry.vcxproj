@@ -88,7 +88,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <MinimalRebuild>false</MinimalRebuild>
-      <AdditionalIncludeDirectories>..\..\Include\Ishiko\WindowsRegistry</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ISHIKO)/Errors\Include;..\..\Include\Ishiko\WindowsRegistry</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -103,7 +103,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <MinimalRebuild>false</MinimalRebuild>
-      <AdditionalIncludeDirectories>..\..\Include\Ishiko\WindowsRegistry</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ISHIKO)/Errors\Include;..\..\Include\Ishiko\WindowsRegistry</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -120,7 +120,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <MinimalRebuild>false</MinimalRebuild>
-      <AdditionalIncludeDirectories>..\..\Include\Ishiko\WindowsRegistry</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ISHIKO)/Errors\Include;..\..\Include\Ishiko\WindowsRegistry</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -139,7 +139,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <MinimalRebuild>false</MinimalRebuild>
-      <AdditionalIncludeDirectories>..\..\Include\Ishiko\WindowsRegistry</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ISHIKO)/Errors\Include;..\..\Include\Ishiko\WindowsRegistry</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
@@ -150,13 +150,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\Source\Key.cpp" />
-    <ClCompile Include="..\Source\KeyImpl.cpp" />
-    <ClCompile Include="..\Source\KeyPath.cpp" />
-    <ClCompile Include="..\Source\Registry.cpp" />
-    <ClCompile Include="..\Source\Exception.cpp" />
-    <ClCompile Include="..\Source\InvalidPredefinedKeyException.cpp" />
-    <ClCompile Include="..\Source\KeyOperationException.cpp" />
+    <ClCompile Include="..\..\Source\Key.cpp" />
+    <ClCompile Include="..\..\Source\KeyImpl.cpp" />
+    <ClCompile Include="..\..\Source\KeyPath.cpp" />
+    <ClCompile Include="..\..\Source\Registry.cpp" />
+    <ClCompile Include="..\..\Source\Exception.cpp" />
+    <ClCompile Include="..\..\Source\InvalidPredefinedKeyException.cpp" />
+    <ClCompile Include="..\..\Source\KeyOperationException.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Include\Ishiko\WindowsRegistry.h" />
@@ -166,7 +166,7 @@
     <ClInclude Include="..\..\Include\Ishiko\WindowsRegistry\Exception.h" />
     <ClInclude Include="..\..\Include\Ishiko\WindowsRegistry\InvalidPredefinedKeyException.h" />
     <ClInclude Include="..\..\Include\Ishiko\WindowsRegistry\KeyOperationException.h" />
-    <ClInclude Include="..\Source\KeyImpl.h" />
+    <ClInclude Include="..\..\Source\KeyImpl.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

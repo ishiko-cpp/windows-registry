@@ -38,30 +38,30 @@
     <ClInclude Include="..\..\Include\Ishiko\WindowsRegistry\KeyOperationException.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\Source\KeyImpl.h">
+    <ClInclude Include="..\..\Source\KeyImpl.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Source\Key.cpp">
+    <ClCompile Include="..\..\Source\Key.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Source\KeyImpl.cpp">
+    <ClCompile Include="..\..\Source\KeyImpl.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Source\KeyPath.cpp">
+    <ClCompile Include="..\..\Source\KeyPath.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Source\Registry.cpp">
+    <ClCompile Include="..\..\Source\Registry.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Source\Exception.cpp">
+    <ClCompile Include="..\..\Source\Exception.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Source\InvalidPredefinedKeyException.cpp">
+    <ClCompile Include="..\..\Source\InvalidPredefinedKeyException.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Source\KeyOperationException.cpp">
+    <ClCompile Include="..\..\Source\KeyOperationException.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

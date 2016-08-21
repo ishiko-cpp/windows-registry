@@ -1,9 +1,12 @@
+ishikopath = envvar("ISHIKO");
+import $(ishikopath)/Errors/Include/Ishiko/Errors.bkl;
+
 toolsets = vs2015 vs2013;
 
 vs2015.solutionfile = ../VC14/IshikoWindowsRegistry.sln;
 vs2013.solutionfile = ../VC12/IshikoWindowsRegistry.sln;
 
-library IshikoWindowsRegistry
+library IshikoWindowsRegistry : IshikoErrors
 {
     archs = x86 x86_64;
 
@@ -27,17 +30,17 @@ library IshikoWindowsRegistry
         ../../Include/Ishiko/WindowsRegistry/InvalidPredefinedKeyException.h
         ../../Include/Ishiko/WindowsRegistry/KeyOperationException.h
 
-        ../Source/KeyImpl.h
+        ../../Source/KeyImpl.h
     }
 
     sources
     {
-        ../Source/Key.cpp
-        ../Source/KeyImpl.cpp
-        ../Source/KeyPath.cpp
-        ../Source/Registry.cpp
-        ../Source/Exception.cpp
-        ../Source/InvalidPredefinedKeyException.cpp
-        ../Source/KeyOperationException.cpp
+        ../../Source/Key.cpp
+        ../../Source/KeyImpl.cpp
+        ../../Source/KeyPath.cpp
+        ../../Source/Registry.cpp
+        ../../Source/Exception.cpp
+        ../../Source/InvalidPredefinedKeyException.cpp
+        ../../Source/KeyOperationException.cpp
     }
 }
