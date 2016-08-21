@@ -1,0 +1,43 @@
+toolsets = vs2015 vs2013;
+
+vs2015.solutionfile = ../VC14/IshikoWindowsRegistry.sln;
+vs2013.solutionfile = ../VC12/IshikoWindowsRegistry.sln;
+
+library IshikoWindowsRegistry
+{
+    archs = x86 x86_64;
+
+    includedirs += ../../Include/Ishiko/WindowsRegistry;
+
+    outputdir = ../../Lib/$(arch);
+
+    if ($(config) == Debug)
+    {
+        basename = IshikoWindowsRegistry-d;
+    }
+
+    headers
+    {
+        ../../Include/Ishiko/WindowsRegistry.h
+
+        ../../Include/Ishiko/WindowsRegistry/Key.h
+        ../../Include/Ishiko/WindowsRegistry/KeyPath.h
+        ../../Include/Ishiko/WindowsRegistry/Registry.h
+        ../../Include/Ishiko/WindowsRegistry/Exception.h
+        ../../Include/Ishiko/WindowsRegistry/InvalidPredefinedKeyException.h
+        ../../Include/Ishiko/WindowsRegistry/KeyOperationException.h
+
+        ../Source/KeyImpl.h
+    }
+
+    sources
+    {
+        ../Source/Key.cpp
+        ../Source/KeyImpl.cpp
+        ../Source/KeyPath.cpp
+        ../Source/Registry.cpp
+        ../Source/Exception.cpp
+        ../Source/InvalidPredefinedKeyException.cpp
+        ../Source/KeyOperationException.cpp
+    }
+}
