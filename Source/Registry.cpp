@@ -78,9 +78,17 @@ Key Registry::openSubKey(HKEY hiveKey, const std::string& path)
 	return Key(impl);
 }
 
-void Registry::deleteSubKey(Key& key, const std::string& path)
+void Registry::deleteSubKey(Key& key, const std::string& path, bool recursive)
 {
-	LONG result = RegDeleteKeyExA(key.key(), path.c_str(), 0, 0);
+    LONG result;
+    if (!recursive)
+    {
+        result = RegDeleteKeyExA(key.key(), path.c_str(), 0, 0);
+    }
+    else
+    {
+        result = RegDeleteTreeA(key.key(), path.c_str());
+    }
 	if ((result != ERROR_SUCCESS) && (result != ERROR_FILE_NOT_FOUND))
 	{
 		throw KeyOperationException(KeyOperationException::eDelete,
@@ -88,9 +96,17 @@ void Registry::deleteSubKey(Key& key, const std::string& path)
 	}
 }
 
-void Registry::deleteSubKey(HKEY key, const std::string& path)
+void Registry::deleteSubKey(HKEY key, const std::string& path, bool recursive)
 {
-	LONG result = RegDeleteKeyExA(key, path.c_str(), 0, 0);
+    LONG result;
+    if (!recursive)
+    {
+        result = RegDeleteKeyExA(key, path.c_str(), 0, 0);
+    }
+    else
+    {
+        result = RegDeleteTreeA(key, path.c_str());
+    }
 	if ((result != ERROR_SUCCESS) && (result != ERROR_FILE_NOT_FOUND))
 	{
 		throw KeyOperationException(KeyOperationException::eDelete,

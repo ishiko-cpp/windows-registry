@@ -40,8 +40,8 @@ public:
 	static Key createSubKey(HKEY hiveKey, const std::string& path);
 	static Key openSubKey(Key& key, const std::string& path);
 	static Key openSubKey(HKEY hiveKey, const std::string& path);
-	static void deleteSubKey(Key& key, const std::string& path);
-	static void deleteSubKey(HKEY key, const std::string& path);
+	static void deleteSubKey(Key& key, const std::string& path, bool recursive);
+	static void deleteSubKey(HKEY key, const std::string& path, bool recursive);
 };
 
 }
