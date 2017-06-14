@@ -1,5 +1,5 @@
 /*
-	Copyright (c) 2015 Xavier Leclercq
+	Copyright (c) 2015-2017 Xavier Leclercq
 
 	Permission is hereby granted, free of charge, to any person obtaining a
 	copy of this software and associated documentation files (the "Software"),
@@ -46,6 +46,7 @@ public:
 	explicit Key(KeyImpl* impl);
 	~Key();
 
+    bool hasValue(const std::string& valueName);
 	void enumValues(std::vector<std::string>& valueNames);
 	std::string getValueAsString(const std::string& valueName) const;
 	void setValue(const std::string& valueName, const std::string& valueData);

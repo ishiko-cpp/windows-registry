@@ -1,5 +1,5 @@
 /*
-	Copyright (c) 2015 Xavier Leclercq
+	Copyright (c) 2015-2017 Xavier Leclercq
 
 	Permission is hereby granted, free of charge, to any person obtaining a
 	copy of this software and associated documentation files (the "Software"),
@@ -36,6 +36,22 @@ Key::Key(KeyImpl* impl)
 
 Key::~Key()
 {
+}
+
+bool Key::hasValue(const std::string& valueName)
+{
+    bool result = false;
+    std::vector<std::string> valueNames;
+    enumValues(valueNames);
+    for (size_t i = 0; i < valueNames.size(); ++i)
+    {
+        if (valueNames[i] == valueName)
+        {
+            result = true;
+            break;
+        }
+    }
+    return result;
 }
 
 void Key::enumValues(std::vector<std::string>& valueNames)
